@@ -18,7 +18,7 @@ class linked_list():
     if data == None:
       return False
     else:
-      new_node = node(data, self.head)
+      new_node = node(data = data, next = self.head)
       self.head = new_node
 
   def mth_to_last(self, m):
