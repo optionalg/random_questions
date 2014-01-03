@@ -6,6 +6,7 @@ I'm also using these questions to simply get better at programming and focus on 
 
 Many of these algorithms are solutions to problems I've encountered while reading [Programming Interviews Exposed](http://www.amazon.com/Programming-Interviews-Exposed-Secrets-Landing-ebook/dp/B008SGNJOW/ref=tmm_kin_title_0) which I highly recommend to anyone else learning a new programming language. (A big thanks to [my brother](http://www.github.com/ndonnellan) for turning me on to this book). 
 
-### Shell command to run all unittest tests
+Tests are run by doing
 
-    python -m unittest discover Github/random_questions '*_test.py'
+    cd desired_folder
+    nosetests
