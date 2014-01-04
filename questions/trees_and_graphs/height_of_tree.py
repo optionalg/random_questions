@@ -4,9 +4,12 @@ class tree():
     self.left = left
     self.right = right
 
-
-def height_of_tree(tree):
-  if not tree.left and not tree.right:
-    return 1
+def height(tree):
+  '''
+  finds the height of a binary tree recursively
+  '''
+  if tree is None:
+    # there is no height of a non-existant tree!
+    return 0
   else:
-    return 1 + max(height_of_tree(tree.left), height_of_tree(tree.right))
+    return 1 + max(height(tree.left), height(tree.right))

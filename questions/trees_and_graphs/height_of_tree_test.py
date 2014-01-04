@@ -1,5 +1,5 @@
 import unittest
-from height_of_tree import height_of_tree, tree
+from height_of_tree import height, tree
 
 class test_height_of_tree_implementation(unittest.TestCase):
 
@@ -28,7 +28,7 @@ class test_height_of_tree_implementation(unittest.TestCase):
 
   def test_height_of_tree_function(self):
     '''
-    the height of the sample tree above should be 4
+    the height of the sample tree above should be equal to 4
     '''
     sample_tree = self.create_sample_tree()
-    self.assertEqual(height_of_tree(sample_tree), 4)
+    self.assertEqual(height(sample_tree), 4)
