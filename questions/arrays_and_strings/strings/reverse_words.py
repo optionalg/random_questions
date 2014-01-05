@@ -7,7 +7,8 @@ def reverse_words(sentence):
   word = ''
   for character in sentence:
     if character == ' ':
-      # when a space is it, add the saved word to the new sentence
+      # when a space is it, prepend the saved word to the new sentence 
+      # this prepending effectively reverses the order 
       new_sentence = word + new_sentence
       if new_sentence != '':
         # as long as the new_sentence isn't blank, add a space in front of it
@@ -17,7 +18,7 @@ def reverse_words(sentence):
     else:
       # build the word one character at a time
       word += character
-  # collect any word at the end of the sentencex
+  # collect any word at the end of the sentence and prepend
   new_sentence = word + new_sentence
 
   return new_sentence
