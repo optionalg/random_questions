@@ -1,5 +1,6 @@
 import unittest
-from delete_characters import delete_characters
+#from delete_characters import delete_characters
+from delete_characters import delete_characters_no_replace as delete_characters
 
 class test_implementation_of_delete_characters(unittest.TestCase):
 
@@ -38,5 +39,15 @@ class test_implementation_of_delete_characters(unittest.TestCase):
     delete_this = 'ap'
     expected = ''
     self.assertEqual(delete_characters(word, delete_this), expected)
+
+  def test_case_of_one_good_char_in_string(self):
+    '''
+    test case where a string only has one letter and it doesn't need to be deleted
+    '''
+    word = 'a'
+    delete_this = 'b'
+    expected = word
+    self.assertEqual(delete_characters(word, delete_this), expected)
+
 
 
