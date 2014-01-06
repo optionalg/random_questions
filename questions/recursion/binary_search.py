@@ -6,14 +6,18 @@ def binary_search(array, focus_value, current_index = 0):
   value
   '''
   length = len(array)
-  midpoint_index = (length - 1)//2
-  midpoint_value = array[midpoint_index]
-  if midpoint_value == focus_value:
-    return current_index + midpoint_index
-  elif midpoint_value > focus_value:
-    return binary_search(array[:midpoint_index], focus_value, current_index)
+  if length == 0:
+    return False
   else:
-    midpoint_index += 1
-    return binary_search(array[midpoint_index:], focus_value, current_index + midpoint_index)
+    midpoint_index = (length - 1)//2
+    midpoint_value = array[midpoint_index]
+    if midpoint_value == focus_value:
+      return current_index + midpoint_index
+    elif midpoint_value > focus_value:
+      return binary_search(array[:midpoint_index], focus_value, current_index)
+    else:
+      midpoint_index += 1
+      return binary_search(array[midpoint_index:], focus_value, current_index + midpoint_index)
+
 
 

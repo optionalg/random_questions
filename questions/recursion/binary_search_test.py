@@ -23,3 +23,12 @@ class test_binary_search_implementation(unittest.TestCase):
     expected_index = 4
     self.assertEqual(binary_search(a, focus), expected_index)
 
+  def test_false_case(self):
+    '''
+    test that the function returns false if the number is not in the 
+    desired array
+    '''
+    a = [1,2,3,4,5,6,7]
+    focus = 13
+    self.assertFalse(binary_search(a, focus))
+
