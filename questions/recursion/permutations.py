@@ -2,7 +2,6 @@ def permute(string, prefix = '', permutations = []):
   '''
   find every possible permutation of the string and return a list of all permutations
   '''
-  #print string, prefix
   if len(string) > 1:
 
     for i in range(len(string)):
