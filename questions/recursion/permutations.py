@@ -1,6 +1,6 @@
 def permute(string, prefix = '', permutations = []):
   '''
-  print out every possible permutation of the string
+  find every possible permutation of the string and return a list of all permutations
   '''
   #print string, prefix
   if len(string) > 1:
@@ -17,5 +17,3 @@ def permute(string, prefix = '', permutations = []):
     permutations.append(new_combination)
 
   return permutations
-
-print permute('HAT')
