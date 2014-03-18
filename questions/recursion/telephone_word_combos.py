@@ -22,4 +22,7 @@ def map_digit_to_letter(digit):
         '8' : 'TUV',
         '9' : 'WXY'
     }
-    return digit_map[digit]
+    if digit in digit_map:
+        return digit_map[digit]
+    else:
+        return False
