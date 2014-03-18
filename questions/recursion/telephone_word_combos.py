@@ -1,6 +1,6 @@
 def telephone_word_combos(tel_number, combos=[], word='', i=0):
     """
-    accepts a tel_number in the form of 111-1111 or 1111111
+    accepts a tel_number in the form of 1111111
     returns a list of word combinations derived from
     that number
     """
