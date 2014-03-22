@@ -1,12 +1,14 @@
-def telephone_word_combos(tel_number, combos=[], word='', i=0):
+def telephone_word_combos(tel_number, combos=None, word='', i=0):
     """
-    accepts a tel_number in the form of 1111111
+    accepts a tel_number as a string of digits (no hash marks)
     returns a list of word combinations derived from
     that number
     """
+    if not combos:
+        combos = []
+
     if len(tel_number) == len(word):
         combos.append(word)
-        return combos
     else:
         digit = tel_number[i]
         for letter in map_digit_to_letter(digit):
@@ -16,7 +18,8 @@ def telephone_word_combos(tel_number, combos=[], word='', i=0):
                 word = word + letter,
                 i = i+1,
                 )
-        return combos
+
+    return combos
 
 def map_digit_to_letter(digit):
     """
